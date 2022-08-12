@@ -15,7 +15,6 @@ SESSION = environ.get('SESSION', 'Media_search')
 API_ID = int(environ['API_ID'])
 API_HASH = environ['API_HASH']
 BOT_TOKEN = environ['BOT_TOKEN']
-SHORTENER_API = environ['SHORTENER_API']
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
@@ -45,7 +44,7 @@ IMDB = is_enabled((environ.get('IMDB', "True")), True)
 SINGLE_BUTTON = is_enabled((environ.get('SINGLE_BUTTON', "False")), False)
 CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", None)
 BATCH_FILE_CAPTION = environ.get("BATCH_FILE_CAPTION", CUSTOM_FILE_CAPTION)
-IMDB_TEMPLATE = environ.get("IMDB_TEMPLATE", "<b>Query: {query}</b> \n‌‌‌‌IMDb Data:\n\n🏷 Title: <a href={url}>{title}</a>\n🎭 Genres: {genres}\n📆 Year: <a href={url}/releaseinfo>{year}</a>\n🌟 Rating: <a href={url}/ratings>{rating}</a> / 10")
+IMDB_TEMPLATE = environ.get("IMDB_TEMPLATE", "<b>Query: {query}</b> \n‌‌‌‌IMDb Data:\n\n🏷 Title: <a href={url}>{title}</a>\n🎭 Genres: {genres}\n📆 Year: <a href={url}/releaseinfo>{year}</a>\n🌟 Rating: <a href={url}/ratings>{rating}</a> / 10</a>\n 𝕋𝕙𝕚𝕤 ℙ𝕠𝕤𝕥 𝕎𝕚𝕝𝕝 𝔹𝕖 𝔻𝕖𝕝𝕖𝕥𝕖𝕕 𝕀𝕟 5 𝕄𝕚𝕟𝕦𝕥𝕖𝕤 𝔽𝕠𝕣 ℂ𝕠𝕡𝕪𝕣𝕚𝕘𝕙𝕥 ℙ𝕣𝕠𝕥𝕖𝕔𝕥𝕚𝕠𝕟 ‼️")
 LONG_IMDB_DESCRIPTION = is_enabled(environ.get("LONG_IMDB_DESCRIPTION", "False"), False)
 SPELL_CHECK_REPLY = is_enabled(environ.get("SPELL_CHECK_REPLY", "True"), True)
 MAX_LIST_ELM = environ.get("MAX_LIST_ELM", None)
@@ -64,3 +63,18 @@ LOG_STR += ("Long IMDB storyline enabled." if LONG_IMDB_DESCRIPTION else "LONG_I
 LOG_STR += ("Spell Check Mode Is Enabled, bot will be suggesting related movies if movie not found\n" if SPELL_CHECK_REPLY else "SPELL_CHECK_REPLY Mode disabled\n")
 LOG_STR += (f"MAX_LIST_ELM Found, long list will be shortened to first {MAX_LIST_ELM} elements\n" if MAX_LIST_ELM else "Full List of casts and crew will be shown in imdb template, restrict them by adding a value to MAX_LIST_ELM\n")
 LOG_STR += f"Your current IMDB template is {IMDB_TEMPLATE}"
+
+time = """300"""
+update = """potterhub"""
+group = """moviesportal_00"""
+howto = """https://t.me/potter_00"""
+channel = """potterhub"""
+apishortner = """638bea22e5b27f9420265c902cb1051100513daa"""
+website = """https://shorturllink.in/"""
+API = environ.get('API', apishortner)
+WEBSITE = environ.get('WEBSITE', website)
+UPDATES = environ.get('UPDATES', update)
+GROUP = environ.get('GROUP', group)
+HOWTO = environ.get('HOWTO', howto)
+CHANNEL= environ.get('CHANNEL', channel)
+DELETE_TIME = environ.get('DELETE_TIME', time)
